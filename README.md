@@ -6,4 +6,4 @@ By Gokul Swamy and Brenton Chu.
 ## Setup
 1) Run ```git clone --recurse-submodules https://github.com/gkswamy98/294-149-coding-proj.git```
 2) Run ```./setup.sh```
-3) Navigate to ```multiagent-particle-envs/environment.py``` and in the init of MultiAgentEnv, set ```self.discrete_action_input = True```
+3) Run ```python3 run.py --num-agents=10 --num-ddpg=1, --num-maddpg=9, --max-episode_len=5, --num-episodes=10000```
