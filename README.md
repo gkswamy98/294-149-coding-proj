@@ -5,4 +5,4 @@ By Gokul Swamy and Brenton Chu.
 
 ## Setup
 1) Run ```git clone --recurse-submodules https://github.com/gkswamy98/294-149-coding-proj.git```
-2) Fill in rest here ...
+2) Run ```./setup.sh```
