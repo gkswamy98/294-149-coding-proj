@@ -97,7 +97,7 @@ def train(arglist):
             points = new_obs_n[0]
             ddpg_avg_points = np.mean([points[i] for i in range(num_ddpg)])
             ddpg_points.append(ddpg_avg_points)
-            maddpg_avg_points = np.mean([points[i] for i in range(num_ddpg + 1)])
+            maddpg_avg_points = np.mean([points[i] for i in range(num_ddpg, num_agents)])
             maddpg_points.append(maddpg_avg_points)
             print("DDPG AVG POINTS:", ddpg_avg_points)
             print("MADDPG AVG POINTS:", maddpg_avg_points)
@@ -115,7 +115,7 @@ def train(arglist):
                 episode_step = 0
                 ddpg_avg_reward = np.mean([agent_rewards[i][-1] for i in range(num_ddpg)])
                 ddpg_rewards.append(ddpg_avg_reward)
-                maddpg_avg_reward = np.mean([agent_rewards[i][-1] for i in range(num_ddpg + 1)])
+                maddpg_avg_reward = np.mean([agent_rewards[i][-1] for i in range(num_ddpg, num_agents)])
                 maddpg_rewards.append(maddpg_avg_reward)
                 print("DDPG AVG REWARD:", ddpg_avg_reward)
                 print("MADDPG AVG REWARD:", maddpg_avg_reward)
